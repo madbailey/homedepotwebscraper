@@ -1,4 +1,4 @@
-This file uses a selenium webdriver to navigate the home depot store directory creates a pandas dataframe of information about each store listed.
+This file uses a selenium webdriver to navigate the home depot store directory and creates a pandas dataframe of information about each store listed.
 This was created as part of a project I worked on where I needed the addresses of home depot stores linked to store ids for a vlookup table
 Not sure if anyone else will have any use for this, but it's my first webscraper I made to extract useful information, so it's here for posterity. 
 
@@ -8,9 +8,16 @@ Notes for anyone using this:
 In order to use this file you need a chrome webdriver added to your path!
 You should also have beautiful soup, selenium, pandas, and numpy
 
-This file creates an empty csv file to dump a pandas dataframe into. 
-The columns are Store Numbers, Store Name, Store Address, Store Zip Code, and Store State. 
-Some store names hold the store state in them because they are in cities with the same name as other stores.
+This file creates an empty csv file to dump a pandas dataframe into. The columns will be
+Store Numbers 
+Store Name
+Store Address
+Store Zip Code
+Store State
+
+
+Some store names hold the store state in them because they are in cities with the same name as other stores. I left this in for clarity
+you may want to modify the regular expression to exclude anything after a comma.
 
 Two home depot stores do not have store numbers, these are the home depot design centers in San Diego California and Rockville Maryland.
 The code adds null values for the store number. 
